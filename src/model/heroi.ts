@@ -7,5 +7,7 @@ interface Heroi {
 interface Atributos {
     velocidade: number,
     forca: number,
-    inteligencia: number
+    inteligencia: number,
+    durabilidade: number,
+    poder: number
 }

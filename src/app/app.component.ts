@@ -22,7 +22,9 @@ export class AppComponent implements OnInit {
     atributos: {
       velocidade: 0,
       forca: 0,
-      inteligencia: 0
+      inteligencia: 0,
+      durabilidade: 0,
+      poder: 0
     }
   };
   cartaJogadorAnterior: Heroi = {
@@ -31,7 +33,9 @@ export class AppComponent implements OnInit {
     atributos: {
       velocidade: 0,
       forca: 0,
-      inteligencia: 0
+      inteligencia: 0,
+      durabilidade: 0,
+      poder: 0
     }
   };
   cartaMaquina: Heroi = {
@@ -40,7 +44,9 @@ export class AppComponent implements OnInit {
     atributos: {
       velocidade: 0,
       forca: 0,
-      inteligencia: 0
+      inteligencia: 0,
+      durabilidade: 0,
+      poder: 0
     }
   };
 
@@ -50,7 +56,9 @@ export class AppComponent implements OnInit {
     atributos: {
       velocidade: 0,
       forca: 0,
-      inteligencia: 0
+      inteligencia: 0,
+      durabilidade: 0,
+      poder: 0
     }
   };
 
