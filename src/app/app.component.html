@@ -1,0 +1,105 @@
+<section>
+  <div *ngIf="jogando && temAnterior" class="card mx-auto">
+    <div>
+      <div class="md-outline mb-4">
+        <h1>Anterior: </h1>
+        <h1>{{cartaJogadorAnterior.nome}}</h1>
+        <div class="row">
+          <img src="{{cartaJogadorAnterior.imagem}}">
+        </div>
+        <div>
+          <a>Força: {{cartaJogadorAnterior.atributos.forca}}</a>
+        </div>
+        <div>
+          <a>Velocidade: {{cartaJogadorAnterior.atributos.velocidade}}</a>
+        </div>
+        <div>
+          <a>Inteligencia: {{cartaJogadorAnterior.atributos.inteligencia}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="jogando" class="card mx-auto">
+    <div>
+      <div class="md-outline mb-4">
+        <h1>{{cartaJogador.nome}}</h1>
+        <div class="row">
+          <img src="{{cartaJogador.imagem}}">
+        </div>
+        <div>
+          <a>Força: {{cartaJogador.atributos.forca}}</a>
+        </div>
+        <div>
+          <a>Velocidade: {{cartaJogador.atributos.velocidade}}</a>
+        </div>
+        <div>
+          <a>Inteligencia: {{cartaJogador.atributos.inteligencia}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card mx-auto">
+    <div class="card-body">
+      <div class="col-md-12">
+        <h5>Super Trunfo - Super Heróis</h5>
+        <h4>{{ganhou ? "Venceu" : perdeu ? "Perdeu" : ""}}</h4>
+        <p *ngIf="jogando">Placar {{placar1}} x {{placar2}}</p>
+      </div>
+    </div>
+    <mat-form-field appearance="fill" *ngIf="jogando">
+      <mat-label>Atributo</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option value="forca">Força</mat-option>
+        <mat-option value="inteligencia">Inteligencia</mat-option>
+        <mat-option value="velocidade">Velocidade</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div>
+      <button *ngIf="!jogando && !perdeu && !ganhou" (click)="onSubmit()" type="submit" class="btn btn-primary btn-block btn-lg mb-4">
+        <span>Jogar</span>
+      </button>
+      <button *ngIf="jogando && !perdeu && !ganhou" (click)="apostar()" type="submit" class="btn btn-primary btn-block btn-lg mb-4">
+        <span>Apostar</span>
+      </button>
+      <button *ngIf="perdeu || ganhou" (click)="jogarNovamente()" type="submit" class="btn btn-primary btn-block btn-lg mb-4">
+        <span>Jogar Novamente</span>
+      </button>
+    </div>
+  </div>
+
+
+  <div *ngIf="jogando" class="card mx-auto">
+    <div>
+      <div class="md-outline mb-4">
+        <h1>{{cartaMaquina.nome}}</h1>
+        <div class="row">
+          <img src="{{cartaMaquina.imagem}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="jogando && temAnterior" class="card mx-auto">
+    <div>
+      <div class="md-outline mb-4">
+        <h1>Anterior: </h1>
+        <h1>{{cartaMaquinaAnterior.nome}}</h1>
+        <div class="row">
+          <img src="{{cartaMaquinaAnterior.imagem}}">
+        </div>
+        <div>
+          <a>Força: {{cartaMaquinaAnterior.atributos.forca}}</a>
+        </div>
+        <div>
+          <a>Velocidade: {{cartaMaquinaAnterior.atributos.velocidade}}</a>
+        </div>
+        <div>
+          <a>Inteligencia: {{cartaMaquinaAnterior.atributos.inteligencia}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

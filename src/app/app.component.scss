@@ -1,0 +1,10 @@
+div.card {
+  width: 25rem;
+  display: flex;
+}
+
+section {
+  height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+}
